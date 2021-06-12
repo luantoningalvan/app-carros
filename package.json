@@ -5,6 +5,7 @@
   "author": "Luan <ltoningalvan@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon"
   },
   "dependencies": {
