@@ -1,0 +1,271 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-06-13T02:17:32.518Z",
+  "__export_source": "insomnia.desktop.app:v2020.5.2",
+  "resources": [
+    {
+      "_id": "req_44c4fc5d0c414325966f5ac72325008c",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1623550383837,
+      "created": 1623471579520,
+      "url": "{{ _.baseUrl }}/cars",
+      "name": "Listar carros",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "ano_min",
+          "value": "",
+          "description": "",
+          "id": "pair_aa57ef6cc0e64a029e4ad896ff1e80c5",
+          "disabled": true
+        },
+        {
+          "name": "ano_max",
+          "value": "",
+          "description": "",
+          "id": "pair_fd6ec8c7207444d7b69f03a45999b318",
+          "disabled": true
+        },
+        {
+          "name": "preco_min",
+          "value": "",
+          "description": "",
+          "id": "pair_fa9d8bec0c1b4467a830cd0bb69f6ba5",
+          "disabled": true
+        },
+        {
+          "name": "preco_max",
+          "value": "",
+          "description": "",
+          "id": "pair_5fbb4766c37d478eb195fd42ed1c028a",
+          "disabled": true
+        },
+        {
+          "name": "marca",
+          "value": "",
+          "description": "",
+          "id": "pair_761b6f5a7b6940e3906c4772fb1c68b0",
+          "disabled": true
+        },
+        {
+          "name": "modelo",
+          "value": "",
+          "description": "",
+          "id": "pair_ba606228b4ce4cd4af92b18535efc62f",
+          "disabled": true
+        },
+        {
+          "name": "versao",
+          "value": "",
+          "description": "",
+          "id": "pair_f5803da66f2d4fa0bc14304b655cad4e",
+          "disabled": true
+        },
+        {
+          "name": "ano",
+          "value": "",
+          "description": "",
+          "id": "pair_80e49f4712f14f71bd001c72587931c1",
+          "disabled": true
+        },
+        {
+          "name": "quilometragem",
+          "value": "",
+          "description": "",
+          "id": "pair_fc668cc32dcf4852b65f703a41513cc8",
+          "disabled": true
+        },
+        {
+          "name": "tipo_cambio",
+          "value": "",
+          "description": "",
+          "id": "pair_da3db138c91b41418d8fa95bda09ad1a",
+          "disabled": true
+        },
+        {
+          "name": "preco",
+          "value": "",
+          "description": "",
+          "id": "pair_e4ab9473002142e5813f2e4727ba6c79",
+          "disabled": true
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1623471570398,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "parentId": null,
+      "modified": 1623549959723,
+      "created": 1617456511454,
+      "name": "AppCarros",
+      "description": "",
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_0ed736b0db9f451fbd8aa06ad80d2c07",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1623549983341,
+      "created": 1623471592576,
+      "url": "{{ _.baseUrl }}/cars/60c4f55e3c96f32519978f42",
+      "name": "Buscar por um carro em específico",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1623471570348,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_949ea1127a8d48b4b7e5284931bf4e17",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1623550245992,
+      "created": 1623471574164,
+      "url": "{{ _.baseUrl }}/cars",
+      "name": "Adicionar um novo carro",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"marca\": \"Fiat\",\n    \"modelo\": \"Palio\",\n    \"versao\": \"1.0\",\n    \"ano\": 1997,\n    \"quilometragem\": 110000,\n    \"tipo_cambio\": \"manual\",\n    \"preco\": 9500\n}"
+      },
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "description": "",
+          "id": "pair_36711274d63e46daa009f5424244e561"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_46b789301dc94efdaada67ecad923290"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1623471570323,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6e079e52380d4d7abbcfa94c7cc9438e",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1623549996821,
+      "created": 1623471583774,
+      "url": "{{ _.baseUrl }}/cars/60c4f55e3c96f32519978f42",
+      "name": "Editar carro",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"marca\": \"Chevrolet\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d56f2c8f37444f09b38001b4f6a0958b"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1623471570310.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_0cf427a68cf4b55d393faa18bca7b471acfbcb63",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1623471621909,
+      "created": 1617456511527,
+      "name": "Base Environment",
+      "data": { "baseUrl": "http://localhost:3000" },
+      "dataPropertyOrder": { "&": ["baseUrl"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1617456511527,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_0cf427a68cf4b55d393faa18bca7b471acfbcb63",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1617456511528,
+      "created": 1617456511528,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_4890c80d237d4ad2b3d5077c98d46551",
+      "parentId": "wrk_b5256cfb6183421db8aedcabdfe8c1af",
+      "modified": 1617456511459,
+      "created": 1617456511459,
+      "fileName": "teste",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_8faac378530f44828bb5305a5e34f380",
+      "parentId": "env_0cf427a68cf4b55d393faa18bca7b471acfbcb63",
+      "modified": 1623550018408,
+      "created": 1623471636290,
+      "name": "dev",
+      "data": { "baseUrl": "http://localhost:3000" },
+      "dataPropertyOrder": { "&": ["baseUrl"] },
+      "color": "#cc24be",
+      "isPrivate": false,
+      "metaSortKey": 1623471636290,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_7c423ed0596e487e860fd0fe553af312",
+      "parentId": "env_0cf427a68cf4b55d393faa18bca7b471acfbcb63",
+      "modified": 1623550050263,
+      "created": 1623550023783,
+      "name": "production",
+      "data": { "baseUrl": "https://app-carros-luan.herokuapp.com" },
+      "dataPropertyOrder": { "&": ["baseUrl"] },
+      "color": "#15933b",
+      "isPrivate": false,
+      "metaSortKey": 1623550023783,
+      "_type": "environment"
+    }
+  ]
+}
