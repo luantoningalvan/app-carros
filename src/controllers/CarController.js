@@ -1,47 +1,38 @@
-const Car = require("../models/CarModel");
+const indexCarsService = require("../services/IndexCarsService");
+const showCarService = require("../services/ShowCarService");
+const updateCarService = require("../services/UpdateCarService");
+const createCarService = require("../services/CreateCarService");
 
 class CarController {
   async index(req, res) {
-    const { ano_min, ano_max, preco_min, preco_max, ...rest } = req.query;
+    const filters = req.query;
 
-    const filters = {
-      ...(ano_min &&
-        ano_max && {
-          ano: { $lte: ano_max, $gte: ano_min },
-        }),
+    const indexCars = await indexCarsService(filters);
 
-      ...(preco_min &&
-        preco_max && {
-          preco: { $lte: preco_max, $gte: preco_min },
-        }),
-
-      ...rest,
-    };
-
-    const findAllCars = await Car.find(filters);
-    return res.send(findAllCars);
+    return res.send(indexCars);
   }
 
   async show(req, res) {
     const { id } = req.params;
 
-    const findCar = await Car.findById(id);
+    const showCar = await showCarService(id);
 
-    if (!findCar) throw new Error("Carro não encontrado");
-
-    return res.send(findCar);
+    return res.send(showCar);
   }
 
   async create(req, res) {
-    const newCar = new Car(req.body);
-    const result = await newCar.save();
-    return res.send(result);
+    const data = req.body;
+
+    const createCar = await createCarService(data);
+
+    return res.send(createCar);
   }
 
   async update(req, res) {
     const { id } = req.params;
+    const data = req.body;
 
-    const updateCar = await Car.findByIdAndUpdate(id, req.body, { new: true });
+    const updateCar = await updateCarService(id, data);
 
     return res.send(updateCar);
   }
