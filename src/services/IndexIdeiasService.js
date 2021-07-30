@@ -1,6 +1,6 @@
-const Car = require("../models/CarModel");
+const Idea = require("../models/IdeaModel");
 
-module.exports = async function indexCarsService(filters) {
+module.exports = async function indexIdeasService(filters) {
   const { ano_min, ano_max, preco_min, preco_max, ...rest } = filters || {};
 
   const query = {
@@ -17,7 +17,7 @@ module.exports = async function indexCarsService(filters) {
     ...rest,
   };
 
-  const findCars = await Car.find(query);
+  const findIdeas = await Idea.find(query);
 
-  return findCars;
+  return findIdeas;
 };

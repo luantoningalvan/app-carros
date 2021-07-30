@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const CarSchema = new Schema({
+const IdeaSchema = new Schema({
   marca: { type: String, required: true },
   modelo: { type: String, required: true },
   versao: { type: String, required: true },
@@ -11,4 +11,4 @@ const CarSchema = new Schema({
   preco: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("Car", CarSchema);
+module.exports = mongoose.model("Idea", IdeaSchema);

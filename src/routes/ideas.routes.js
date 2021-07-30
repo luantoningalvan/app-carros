@@ -1,13 +1,13 @@
 const { Router } = require("express");
 
-const CarController = require("../controllers/CarController");
+const IdeaController = require("../controllers/IdeasController");
 const { celebrate, Joi, Segments } = require("celebrate");
 
-const carRouter = Router();
+const ideaRouter = Router();
 
-const carController = new CarController();
+const ideaController = new IdeaController();
 
-carRouter.get(
+ideaRouter.get(
   "/",
   celebrate({
     [Segments.QUERY]: {
@@ -24,12 +24,12 @@ carRouter.get(
       preco_max: Joi.number(),
     },
   }),
-  carController.index
+  ideaController.index
 );
 
-carRouter.get("/:id", carController.show);
+ideaRouter.get("/:id", ideaController.show);
 
-carRouter.post(
+ideaRouter.post(
   "/",
   celebrate({
     [Segments.BODY]: {
@@ -42,10 +42,10 @@ carRouter.post(
       preco: Joi.number().required(),
     },
   }),
-  carController.create
+  ideaController.create
 );
 
-carRouter.put(
+ideaRouter.put(
   "/:id",
   celebrate({
     [Segments.BODY]: {
@@ -58,7 +58,7 @@ carRouter.put(
       preco: Joi.number(),
     },
   }),
-  carController.update
+  ideaController.update
 );
 
-module.exports = carRouter;
+module.exports = ideaRouter;
